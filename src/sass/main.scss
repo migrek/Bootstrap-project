@@ -1,0 +1,88 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.main-wrapper {
+    position: relative;
+}
+
+.main-wrapper-content {
+    position: absolute;
+    z-index:1;
+    width: 100%;
+}
+
+.wrapper-first-line {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #c7b299;
+}
+
+.icon-styling {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+}
+
+.cart-icon {
+    @extend .icon-styling;
+    background-image: url(../pictures/icon-cart.png);
+
+}
+
+.search-icon {
+    @extend .icon-styling;
+    background-image: url(../pictures/search.png);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 40px;
+    height: 73px;
+}
+
+.carousel-control-next-icon {
+    background-image: url(../pictures/arrow-not-actine.png);
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../pictures/arrow-not-actine.png);
+    transform: rotate(180deg);
+}
+
+.carousel-control-next-icon:hover {
+    background-image: url(../pictures/arrow-actine.png);
+}
+
+.carousel-control-prev-icon:hover {
+    background-image: url(../pictures/arrow-actine.png);
+    transform: rotate(180deg);
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #969697;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.carousel-indicators .active {
+    border: 2px solid #d3c1ad;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0,0,0,0);
+}
+
+.carousel-indicators {
+    align-items: center;
+}
