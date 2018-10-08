@@ -1,26 +1,40 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+$main-text-color: #ffffff;
+$add-font: 'Raleway', sans-serif;
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
 .main-wrapper {
     position: relative;
+    justify-content: center;
+}
+
+.header {
+    padding-top: 40px;
 }
 
 .main-wrapper-content {
     position: absolute;
     z-index:1;
-    width: 100%;
+    width: 70%;
+    height: 100%;
 }
 
-.wrapper-first-line {
+.nav-panel {
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
+.logo {
+    font-family: $add-font;
+    font-size: 34px;
+    margin-right: 200px;
+}
 .nav-link {
-    color: #ffffff;
+    color: $main-text-color;
 }
 
 .nav-link:hover {
@@ -36,13 +50,38 @@ body {
 .cart-icon {
     @extend .icon-styling;
     background-image: url(../pictures/icon-cart.png);
-
 }
 
 .search-icon {
     @extend .icon-styling;
     background-image: url(../pictures/search.png);
 }
+
+.slider-text {
+    margin: auto;
+    max-width: 700px;
+    text-align: center;
+}
+
+.custom-h2 {
+    font-family: $add-font;
+    font-size: 36px;
+    color: $main-text-color;
+}
+
+.custom-h1 {
+    font-family: $add-font;
+    font-weight: 800;
+    font-size: 52px;
+    color: $main-text-color;
+}
+
+.main-p {
+    font-size: 16px;
+    line-height: 24px;
+    color: $main-text-color;
+}
+
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
     width: 40px;
