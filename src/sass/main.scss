@@ -1,7 +1,8 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-$main-text-color: #ffffff;
+$header-text-color: #ffffff;
 $add-font: 'Raleway', sans-serif;
+$main-text-color: #555555;
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -34,7 +35,7 @@ body {
     margin-right: 200px;
 }
 .nav-link {
-    color: $main-text-color;
+    color: $header-text-color;
 }
 
 .nav-link:hover {
@@ -66,22 +67,21 @@ body {
 .custom-h2 {
     font-family: $add-font;
     font-size: 36px;
-    color: $main-text-color;
+    color: $header-text-color;
 }
 
 .custom-h1 {
     font-family: $add-font;
     font-weight: 800;
     font-size: 52px;
-    color: $main-text-color;
+    color: $header-text-color;
 }
 
 .main-p {
     font-size: 16px;
     line-height: 24px;
-    color: $main-text-color;
+    color: $header-text-color;
 }
-
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
     width: 40px;
@@ -124,4 +124,119 @@ body {
 
 .carousel-indicators {
     align-items: center;
+}
+
+.container-servises {
+    margin: 90px auto;
+}
+
+.servises::after {
+	width: 70px;
+	height: 3px;
+	margin: 0 calc(50% - 35px);
+	background-color: #f1eee9;
+	display: block;
+	margin-top: 25px;
+	content: '';
+}
+
+.servises:hover {
+    cursor: pointer;
+}
+
+.servises:hover .serv-item-caption {
+    color: #c7b299;
+}
+ 
+.servises:hover::after {
+    background-color: #c7b299;
+}
+
+.serv-icon {
+    width: 55px;
+    height: 55px;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.design-icon {
+    @extend .serv-icon;
+    background-image: url(../pictures/serv-design-no-active.png);
+}
+
+.developement-icon {
+    @extend .serv-icon;
+    background-image: url(../pictures/serv-developement-no-active.png);
+}
+
+.customization-icon {
+    @extend .serv-icon;
+    background-image: url(../pictures/serv-customization-no-active.png); 
+}
+
+.marketing-icon {
+    @extend .serv-icon;
+    background-image: url(../pictures/serv-marketing-no-active.png); 
+}
+
+.servises-design:hover .design-icon {
+    background-image: url(../pictures/serv-design-active.png);
+}
+
+.servises-developement:hover .developement-icon {
+    background-image: url(../pictures/serv-developement-active.png);
+}
+
+.servises-customization:hover .customization-icon {
+    background-image: url(../pictures/serv-customization-active.png);
+}
+
+.servises-marketing:hover .marketing-icon {
+    background-image: url(../pictures/serv-marketing-active.png);
+}
+
+.serv-item-caption {
+    font-size: 22px;
+    color: $main-text-color;
+}
+
+.serv-item-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $main-text-color;
+}
+
+.block-caption {
+    font-size: 30px;
+    color: $main-text-color;
+}
+
+.container-sliders {
+    max-width: 770px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.slider-item {
+    position: relative;
+}
+
+.slider-left {
+    position: absolute;
+    left: -230px;
+    bottom: 0;
+    z-index: -1;
+}
+
+.slider-right {
+    position: absolute;
+    left: 230px;
+    bottom: 0;
+    z-index: -1;
+}
+
+.full-block {
+    height: 100px;
+    background: linear-gradient(to right, #211b19, #4e3427);
 }
