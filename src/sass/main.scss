@@ -222,6 +222,11 @@ body {
 .limit-width {
     max-width: 770px;
     margin: auto;
+    padding: 0;
+}
+
+.margin-top-bot {
+    margin: 50px 0;
 }
 
 .slider-item {
@@ -276,11 +281,12 @@ body {
     width: 170px;
     height: 50px;
     font-weight: 800;
+    box-shadow: 0px -3px 0px #736357 inset;
 }
 
 .btn:active {
-    background-color: #998675;
-    box-shadow: 0px -3px 0px #736357 inset;
+    background-color: #736357;
+    box-shadow: 0px -3px 0px #998675 inset;
 }
 
 .projects-panel {
@@ -302,33 +308,89 @@ body {
     border: none;
 }
 
-.wrapper-project-block:hover .social-icons-line, .shadow-mask-black {
+.wrapper-photo-block {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.wrapper-project-block {
+    margin-bottom: 30px;
+}
+
+.wrapper-project-block:hover .shadow-mask-black {
 	visibility: visible;
 }
 
+.wrapper-project-block:hover .project-caption-block {
+	background-color: #362f2d;
+}
+
+.wrapper-project-block:hover .project-caption-block::before {
+    background-image: url(../pictures/arrow-dark.png);
+}
+
+.wrapper-project-block:hover .caption-project {
+    color: $header-text-color;
+}
+
+.wrapper-project-block:hover .text-line-project {
+    color: $alt-text-color;
+}
+
 .project-photo {
-	width: 370px;
-	height: 237px;
+	width: 100%;
 }
 
 .shadow-mask-black {
 	position: absolute;
 	top: 0;
-	left: 15px;
-	right: -15px;
+	left: 0;
+	right: 0;
 	bottom: 0;
 	background-color: rgba(0,0,0, .3);
 	visibility: hidden;
+}
+
+.project-inner-link {
+    width: 26px;
+    height: 26px;
+    margin: 0 15px;
+}
+
+.project-caption-block {
+    padding: 25px;
+    position: relative;
+    text-align: left;
+}
+
+.project-caption-block::before {
+    content: '';
+    background-image: url(../pictures/arrow-white.png);
+    width: 30px;
+    height: 10px;
+    position: absolute;
+    left: 15px;
+    top: -10px;
 }
 
 .caption-project {
     color: $alt-text-color;
     font-family: $add-font;
     font-size: 20px;
+    margin: 0;
 }
 
 .text-line-project {
     font-size: 14px;
     color: #d1d1d1;
+    margin: 0;
 }
 
+.bg-video {
+    max-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../pictures/bg-video.jpg);
+    background-size: contain;
+}
