@@ -630,3 +630,13 @@ body {
     background-color: #111111;
     height: 100px;
 } 
+
+.nav-link-bottom {
+    border-right: 1px solid #252525;
+    color: $main-text-color;
+    font-size: 13px;
+}
+
+.nav-link-bottom:last-of-type {
+    border-right: none;
+}
