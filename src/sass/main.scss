@@ -56,6 +56,15 @@ button:focus {
     color: $main-text-color;
 }
 
+.nav-margin-link {
+    margin: 0 7px;
+    font-size: 14px;
+}
+
+.nav-icons-first {
+    margin-left: 50px;
+}
+
 .logo {
     font-family: $add-font;
     font-size: 34px;
@@ -86,6 +95,14 @@ button:focus {
 .search-icon {
     @extend .icon-styling;
     background-image: url(../pictures/search.png);
+}
+
+.cart-icon:hover {
+    background-image: url(../pictures/icon-cart-hover.png);
+}
+
+.search-icon:hover {
+    background-image: url(../pictures/search-hover.png);
 }
 
 .slider-text {
@@ -344,6 +361,10 @@ button:focus {
     border: none;
 }
 
+.project-item {
+    margin: 0 5px;
+}
+
 .wrapper-photo-block {
 	width: 100%;
 	height: 100%;
@@ -392,6 +413,27 @@ button:focus {
     width: 26px;
     height: 26px;
     margin: 0 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.link-ref {
+    @extend .project-inner-link;
+    background-image: url(../pictures/link.png);
+}
+
+.link-ref:hover {
+    background-image: url(../pictures/link-projects-hover.png);
+}
+
+.loop-ref {
+    @extend .project-inner-link;
+    background-image: url(../pictures/loop.png);
+}
+
+.loop-ref:hover {
+    @extend .project-inner-link;
+    background-image: url(../pictures/loop-projects-hover.png);
 }
 
 .project-caption-block {
@@ -535,6 +577,10 @@ button:focus {
     font-size: 14px;
     position: relative;
 }
+.read-more-link:hover {
+    text-decoration: none;
+    color: $header-text-color;
+}
 
 .read-more-link::after {
     content: '';
@@ -570,6 +616,11 @@ button:focus {
     font-family: $add-font;
 }
 
+.adv-item {
+    margin: 10px auto;
+    cursor: pointer;
+}
+
 .wrapper-project-block:hover .posts-caption-block {
     background-color: #362f2d;
     border: none;
@@ -588,25 +639,37 @@ button:focus {
 }
 
 .carousel-control-prev-custom, .carousel-control-next-custom {
-    border: 2px solid #d2d2d2;
-    border-radius: 50%;
+    display: contents;
+    font-weight: 500;
     width: 20px;
     height: 20px;
     color: #d2d2d2;
 }
 
 .carousel-control-prev-c, .carousel-control-next-c {
-    bottom: -40px;
-    width: 50%;
+    border: 1.5px solid #d2d2d2;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
     text-decoration: none;
+    position: absolute;
+    top: auto;
 }
 
 .carousel-control-prev-c {
-    right: 0;
+    left: calc(50% - 14px);
 }
 
 .carousel-control-next-c {
-    left: 0;
+    left: calc(50% + 14px);
+}
+
+.carousel-control-prev-c:hover, .carousel-control-next-c:hover {
+    border-color: #cab69f;
+}
+
+.carousel-control-prev-c:hover .carousel-control-prev-custom , .carousel-control-next-c:hover .carousel-control-next-custom {
+    color:  #cab69f;
 }
 
 .bg-logos {
@@ -658,6 +721,9 @@ button:focus {
     text-decoration: none;
     color: #959595;
 }
+.footer-link:hover {
+    color: $header-text-color;
+}
 
 .footer-bottom {
     background-color: #111111;
@@ -675,8 +741,31 @@ button:focus {
     border-right: none;
 }
 
+.wrapper-widgets {
+    width: 280px;
+}
+.img-widget {
+    max-width: 130px;
+    max-height: 100px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    .mobile-block {
+        background-image: none;
+    }
+    .mobile-text {
+        margin: auto;
+        padding: 0 15px;
+    }
+
+    .slider-right, .slider-left  {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 991px) {
-    .carousel {
+    .carousel-top {
        display: none;
     }
     .main-wrapper {
